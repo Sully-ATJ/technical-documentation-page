@@ -1,0 +1,100 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<div class="pageWrapper">
+  <nav id="navbar">
+    <header>React Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#What_is_React?">What is React?</a></li>
+      <li><a class="nav-link" href="#Components_&_Props">Components & Props</a></li>
+      <li><a class="nav-link" href="#JSX">JSX</a></li>
+      <li><a class="nav-link" href="#Babel">Babel</a></li>
+      <li><a class="nav-link" href="#Virtual_DOM">Virtual DOM</a></li>
+      <li><a class="nav-link" href="#Your_first_React_App">Your first React app</a></li>
+      <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+      <li><a class="nav-link" href="#References">References</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="What_is_React?">
+      <header >What is React?</header>
+      <p>React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is used to create components, handle state and props, utilize event listeners and certain life cycle methods to update data as it changes.</p>
+      <p>React combines HTML with JavaScript functionality to create its own markup language, JSX, an extension of the Javascript language syntax. It also makes use of a virtual DOM to update the view much quicker.</p>
+    </section>
+    
+    <section class="main-section" id="Components_&_Props">
+      <header >Components & Props</header>
+      <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+      <p>The simplest way to define a component is to write a JavaScript function:<br><pre><code>
+        function Welcome(props){<br>
+          return &lt;h1&gt;Hello ,{props.name}&lt;/h1&gt;;<br>
+        }
+      </code></pre></p>
+      <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.</p><p>You can also use an ES6 class to define a component:<br>
+      <pre><code>
+        class Welcome extends React.Component {<br>
+          render() {<br>
+            return &lt;h1&gt;Hello ,{props.name}&lt;/h1&gt;;
+          }<br>
+        }
+      </code></pre>
+      </p>
+      
+    </section>
+    
+    <section class="main-section" id="JSX">
+      <header >JSX</header>
+      <p>Consider this variable declaration:<br></p>
+        <pre><code>
+          const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;<br>
+        </code></pre>
+        <p>This funny tag syntax is neither a string nor HTML.</p>
+<p>It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+<p>JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.
+      </p>
+    </section>
+    
+    <section class="main-section" id="Babel">
+      <header >Babel</header>
+      <p>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. An important feature of Babel related to React is that it can also convert JSX syntax to javascript.</p>
+    </section>
+    
+    <section class="main-section" id="Virtual_DOM">
+      <header >Virtual Dom</header>
+      <p>First things first, DOM stands for “Document Object Model”. The DOM in simple words represents the UI of your application. Everytime there is a change in the state of your application UI, the DOM gets updated to represent that change. Now the catch is frequently manipulating the DOM affects performance, making it slow.</p>
+      <p>That’s where the concept of virtual DOM comes in and performs significantly better than the real DOM. The virtual DOM is only a virtual representation of the DOM. Everytime the state of our application changes, the virtual DOM gets updated instead of the real DOM.</p>
+    </section>
+    
+    <section class="main-section" id="Your_first_React_App">
+      <header >Your first React App</header>
+      <p>Create React App is a comfortable environment for learning React, and is the best way to start building a new single-page application in React.</p>
+<p>It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your machine. To create a project, run:<br>
+  <pre>
+    <code>
+      npx create-react-app my-app<br>
+      cd my-app<br>
+      npm start<br>
+    </code>
+  </pre></p>
+    </section>
+    <section class="main-section" id="Hello_World">
+      <header id="hello">Hello World</header>
+      <p>The smallest example of React would be displaying 'Hello World' on the display. This can be achive with the following code:<br>
+        <pre><code><br>
+         ReactDOM.render(<br>
+           &lt;h1&gt;Hello World&lt;/h1&gt;,document.getElementById('root')<br>
+         );<br>
+        </code></pre></p>
+    </section>
+    <section class="main-section" id="References">
+      <header id="refs">References</header>
+      <p>You can find more information on the related topics below:</p>
+      <ul>
+        <li><a href="https://reactjs.org/docs/getting-started.html">React</a></li>
+        <li><a href="https://reactjs.org/docs/components-and-props.html">Components and props</a></li>
+        <li><a href="https://reactjs.org/docs/create-a-new-react-app.html#create-react-app">First React App</a></li>
+        <li><a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a></li>
+        <li><a href="https://babeljs.io/docs/en/">Babel</a></li>
+      </ul>
+    </section>
+  </main>
+</div>
